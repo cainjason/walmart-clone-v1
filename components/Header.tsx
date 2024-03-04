@@ -24,7 +24,7 @@ function Header() {
 				<input 
 					type='text' 
 					placeholder="Search Everything..."
-					className="flex-1"
+					className="flex-1 px-4 rounded-l-full outline-none"
 				/>
 				<button>
 					<Search className="rounded-full h-10"
