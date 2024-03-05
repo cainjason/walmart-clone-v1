@@ -83,7 +83,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 				</div>
 				</Link>
 				<Link
-					href={"/"}
+					href={"/basket"}
 					className="hidden xl:flex text-white font-bold items-center space-x-2 text-sm"
 				>
 				<ShoppingCart size={20} />
