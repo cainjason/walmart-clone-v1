@@ -11,8 +11,8 @@ import {
 
 function Header() {
   return (
-    <header className="flex items-center bg-walmart px-10 py-7 space-x-5">
-			<Link href='/' className="">
+    <header className="flex flex-col md:flex-row items-center bg-walmart px-10 py-7 space-x-5">
+			<Link href='/' className="mb-5 md:mb-0">
 				<Image
 					src="https://links.papareact.com/yur"
 					alt="Logo"
@@ -33,7 +33,7 @@ function Header() {
 				</button>
 			</form>
 
-			<div className="flex space-x-5 p-5 pb-0 md:p-0">
+			<div className="flex space-x-5 p-5 mt-5 md:mt-0">
 				<Link
 					href={"/"}
 					className="hidden xl:flex text-white font-bold items-center space-x-2 text-sm"
@@ -66,6 +66,16 @@ function Header() {
 				<div>
 					<p className="text-xs font-extralight">Sign In</p>
 					<p>Account</p>
+				</div>
+				</Link>
+				<Link
+					href={"/"}
+					className="hidden xl:flex text-white font-bold items-center space-x-2 text-sm"
+				>
+				<ShoppingCart size={20} />
+				<div>
+					<p className="text-xs font-extralight">No Items</p>
+					<p>$0.00</p>
 				</div>
 				</Link>
 			</div>
