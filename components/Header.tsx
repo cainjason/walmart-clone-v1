@@ -11,17 +11,20 @@ import {
 	User,
 } from "lucide-react";
 import { FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 function Header() {
+	const router = useRouter();
 
 const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 	e.preventDefault();
 
-	const input = e.currentTarget.input.value; 
+	const input = e.currentTarget.input.value;
+	router.push(`/search?q=${input}`);
 }
 
   return (
-    <header className="flex flex-col md:flex-row items-center bg-walmart px-10 py-7 space-x-5">
+    <header className="flex flex-col md:flex-row bg-walmart items-center px-10 py-7 space-x-5">
 			<Link href='/' className="mb-5 md:mb-0">
 				<Image
 					src="https://i.imgur.com/5V4wehM.png"
