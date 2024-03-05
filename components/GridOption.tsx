@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ function GridOption({title, className, image}: Props) {
             pathname: "/",
             query: { q: title },
         }}
-            className="relative"
+            className={cn("relative", className)}
         >
             <h2>{title}</h2>
 
