@@ -14,6 +14,7 @@ function GridOption({title, className, image}: Props) {
             pathname: "/",
             query: { q: title },
         }}
+            className="relative"
         >
             <h2>{title}</h2>
 
@@ -22,6 +23,7 @@ function GridOption({title, className, image}: Props) {
                 src={image}
                 alt={title}
                 layout='fill'
+                className="object-cover opacity-20 rounded-md"
             />
             )}
         </Link>
