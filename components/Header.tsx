@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,8 +10,14 @@ import {
 	ShoppingCart,
 	User,
 } from "lucide-react";
+import { FormEvent } from "react";
 
 function Header() {
+
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+
+}
+
   return (
     <header className="flex flex-col md:flex-row items-center bg-walmart px-10 py-7 space-x-5">
 			<Link href='/' className="mb-5 md:mb-0">
@@ -20,7 +28,7 @@ function Header() {
 					height={150} 
 						/>
 			</Link>
-			<form className="flex items-center bg-white rounded-full w-full flex-1">
+			<form onSubmit={handleSubmit} className="flex items-center bg-white rounded-full w-full flex-1">
 				<input 
 					type='text' 
 					placeholder="Search Everything..."
