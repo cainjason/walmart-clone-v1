@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -15,6 +16,14 @@ function GridOption({title, className, image}: Props) {
         }}
         >
             <h2>{title}</h2>
+
+            {image && (
+            <Image
+                src={image}
+                alt={title}
+                layout='fill'
+            />
+            )}
         </Link>
   )
 }
