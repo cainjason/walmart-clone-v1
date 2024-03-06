@@ -1,10 +1,15 @@
+type Props = {
+    searchParams: {
+        q: string;
+    }
+}
 
-function SearchPage() {
-  return (
-    <div>
-      Search Page
-    </div>
-  )
+
+function SearchPage({searchParams: { q } }: Props) {
+
+  // Fetch the Search Results 
+	
+  return <div>SearchPage</div>
 }
 
 export default SearchPage;
